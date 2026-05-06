@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ParticlesBackground from "@/components/lightswind/particles-background";
 
 interface SocialItemProps {
   href: string;
@@ -27,9 +28,9 @@ function SocialItem({ href, iconSrc, label }: SocialItemProps) {
 	);
 }
 
-export default function Home() {
+export function Hero({ className }: { className?: string }) {
   return (
-		<div className="flex flex-col h-dvh justify-center items-center px-4 lg:px-20">
+		<div className={`flex flex-col justify-center items-center px-4 lg:px-20 ${className || ''}`}>
 			<main className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-center max-w-80 lg:max-w-210 xl:max-w-262">
 				<h1 className="font-bold font-josefin-sans text-5xl xl:text-8xl wrap-break-word lg:text-right">
 					Rafael Domingues
@@ -64,6 +65,22 @@ export default function Home() {
 					label="contact@rafaeldomingues.dev"
 				/>
 			</footer>
+		</div>
+	);
+}
+
+export default function Background() {
+	return (
+		<div className="relative h-dvh overflow-hidden">
+			<ParticlesBackground
+				colors={['#aaaaaa', '#808080', '#cecece']}
+				size={4}
+				countDesktop={60}
+				countTablet={80}
+				countMobile={80}
+				zIndex={-1}
+			/>
+			<Hero className="absolute inset-0" />
 		</div>
 	);
 }
