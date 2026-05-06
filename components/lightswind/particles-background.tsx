@@ -123,17 +123,6 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
           filter: url(#glow);
         }
       `}</style>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
-            <feMerge>
-              <feMergeNode in="coloredBlur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-      </svg>
     </div>
   );
 };
