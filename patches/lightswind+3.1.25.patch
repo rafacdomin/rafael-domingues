@@ -1,0 +1,26 @@
+diff --git a/node_modules/lightswind/lightswindv1.0.css b/node_modules/lightswind/lightswindv1.0.css
+index 1f560a8..51cdc7d 100644
+--- a/node_modules/lightswind/lightswindv1.0.css
++++ b/node_modules/lightswind/lightswindv1.0.css
+@@ -450,7 +450,7 @@ video {
+ }
+ 
+ @property --border-angle {
+-    syntax: <angle>;
++    syntax: "<angle>";
+     inherits: true;
+     initial-value: 0turn
+ }
+diff --git a/node_modules/lightswind/plugin.js b/node_modules/lightswind/plugin.js
+index f96ae47..22764f4 100644
+--- a/node_modules/lightswind/plugin.js
++++ b/node_modules/lightswind/plugin.js
+@@ -544,7 +544,7 @@ module.exports = plugin(
+         animationPlayState: "paused",
+       },
+       "@property --border-angle": {
+-        syntax: "<angle>",
++        syntax: '"<angle>"',
+         inherits: true,
+         "initial-value": "0turn",
+       },
