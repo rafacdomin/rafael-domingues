@@ -24,4 +24,4 @@ global.ResizeObserver = class ResizeObserver {
 }
 
 // Mock window.particlesJS
-global.particlesJS = vi.fn()
+;(global as any).particlesJS = vi.fn()
