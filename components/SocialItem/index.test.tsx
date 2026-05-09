@@ -8,7 +8,8 @@ describe('SocialItem', () => {
     
     const link = screen.getByRole('link');
     expect(link).toHaveAttribute('href', 'https://example.com');
-    expect(link).toHaveAttribute('target', '__blank');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
     
     const image = screen.getByAltText('Example');
     // For Next.js image component we check that src contains the icon

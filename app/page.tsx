@@ -1,8 +1,5 @@
-"use client";
-
-import { motion } from "motion/react";
-import ParticlesBackground from "@/components/lightswind/particles-background";
 import Hero from "@/components/Hero";
+import ParticlesWrapper from "@/components/ParticlesWrapper";
 
 const phrases = [
 	["Building Scalable Apps with", "React"],
@@ -36,21 +33,14 @@ const socials = [
 export default function Home() {
 	return (
 		<div className="relative h-dvh overflow-hidden">
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 1.5 }}
-				className="absolute inset-0 z-[-1]"
-			>
-				<ParticlesBackground
-					colors={['#aaaaaa', '#808080', '#cecece']}
-					size={4}
-					countDesktop={60}
-					countTablet={80}
-					countMobile={80}
-					zIndex={-1}
-				/>
-			</motion.div>
+			<ParticlesWrapper
+				colors={['#aaaaaa', '#808080', '#cecece']}
+				size={4}
+				countDesktop={60}
+				countTablet={80}
+				countMobile={80}
+				zIndex={-1}
+			/>
 			<Hero phrases={phrases} socials={socials} className="absolute inset-0" />
 		</div>
 	);

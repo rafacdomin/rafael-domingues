@@ -5,18 +5,21 @@ import "./globals.css";
 const josefinSans = Josefin_Sans({
 	variable: '--font-josefin-sans',
 	subsets: ['latin'],
+	display: 'swap',
 });
 
 const poppins = Poppins({
   weight: ["400", "300"],
 	variable: '--font-poppins',
 	subsets: ['latin'],
+	display: 'swap',
 });
 
 const numans = Numans({
   weight: ["400"],
 	variable: '--font-numans',
 	subsets: ['latin'],
+	display: 'swap',
 });
 
 export const metadata: Metadata = {
