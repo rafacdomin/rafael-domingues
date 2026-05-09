@@ -13,7 +13,8 @@ export default function SocialItem({ href, iconSrc, label }: SocialItemProps) {
 	return (
 		<motion.a
 			href={href}
-			target="__blank"
+			target="_blank"
+			rel="noopener noreferrer"
 			initial="initial"
 			whileHover="hover"
 			className="relative flex items-center gap-2 group lg:hover:text-white transition-colors duration-200 py-1 px-2 rounded-lg overflow-hidden z-10"
